@@ -1,0 +1,18 @@
+language: nodejs
+node_js: 
+  - "stable"
+
+script:
+  - npm install
+  - npm test
+  - npm install -g surge
+  - npm run build
+
+deploy:
+  provider: surge
+  skip_cleanup: true
+  domain: testdevelopmentbyhaseebahmed.surge.sh
+  project: ./build/
+
+on:
+  branch: master
