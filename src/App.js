@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <p className="App-link">It's Fun</p>
       </header>
     </div>
   );
