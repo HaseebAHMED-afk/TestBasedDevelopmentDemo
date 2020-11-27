@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { getByText, render } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
@@ -12,4 +12,10 @@ test('renders its fun', () => {
    const linkElement = getByText(/it's fun/i);
    expect(linkElement).toBeInTheDocument();
  });
+
+test('renders image', () =>{
+  const {getByAltText} = render(<App />);
+  const linkElement = getByAltText(/logo/i)
+  expect(linkElement).toBeInTheDocument();
+})
  
