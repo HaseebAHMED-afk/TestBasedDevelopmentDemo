@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import About from './About';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           Learn React
         </a>
         <p className="App-link">It's Fun</p>
+        <About />
       </header>
     </div>
   );
